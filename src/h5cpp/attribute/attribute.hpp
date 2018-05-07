@@ -197,6 +197,14 @@ class DLL_EXPORT Attribute
     void write(const char *data,const datatype::Datatype &mem_type) const;
 
     template<typename T>
+    T read() const
+    {
+      T ret;
+      read(ret);
+      return ret;
+    }
+
+    template<typename T>
     void read(T &data) const;
 
     template<typename T>

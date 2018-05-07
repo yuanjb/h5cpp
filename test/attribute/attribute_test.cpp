@@ -120,6 +120,18 @@ TEST_F(Attribute,test_create_from_vector)
   EXPECT_EQ(buffer,data);
 }
 
+TEST_F(Attribute, read_auto)
+{
+  auto a = root_.attributes.create_from("test",float(23.4));
+  auto ret = a.read<float>();
+  EXPECT_EQ(ret, 23.4f);
+
+//  using AttributeData = std::vector<double>;
+//  AttributeData data{1,2,3,4,5};
+//  auto b = root_.attributes.create_from("test2",data);
+//  auto ret_b = b.read<AttributeData>();
+//  EXPECT_EQ(ret_b, data);
+}
 
 
 
