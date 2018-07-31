@@ -14,6 +14,8 @@ endforeach()
 configure_file(h5py_test_data.h5 h5py_test_data.h5 COPYONLY)
 configure_file(h5py_test_boolattr.h5 h5py_test_boolattr.h5 COPYONLY)
 configure_file(pniio_test_boolattr.h5 pniio_test_boolattr.h5 COPYONLY)
+configure_file(h5cpp_test_1.8_boolattr.h5 h5cpp_test_1.8_boolattr.h5 COPYONLY)
+configure_file(h5cpp_test_1.10_boolattr.h5 h5cpp_test_1.10_boolattr.h5 COPYONLY)
 
 set(dir ${CMAKE_CURRENT_SOURCE_DIR})
 
