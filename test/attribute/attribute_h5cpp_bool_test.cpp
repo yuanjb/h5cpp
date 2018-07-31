@@ -50,48 +50,72 @@ TEST_F(H5CppBoolTest, test_read_scalar_bool_18)
 {
   auto attrue =  root_group_18.attributes["bool_scalar_true"];
   bool buffer;
+  int ibuffer;
   attrue.read(buffer);
   EXPECT_EQ(buffer, true);
+  attrue.read(ibuffer);
+  EXPECT_EQ(ibuffer, 1);
   bool buffer2;
+  int ibuffer2;
   auto atfalse =  root_group_18.attributes["bool_scalar_false"];
   atfalse.read(buffer2);
   EXPECT_EQ(buffer2, false);
+  atfalse.read(ibuffer2);
+  EXPECT_EQ(ibuffer2, 0);
 }
 
 TEST_F(H5CppBoolTest, test_read_simple_bool_18)
 {
   auto attrue =  root_group_18.attributes["bool_simple_true"];
   bool buffer;
+  int ibuffer;
   attrue.read(buffer);
   EXPECT_EQ(buffer, true);
+  attrue.read(ibuffer);
+  EXPECT_EQ(ibuffer, 1);
   bool buffer2;
+  int ibuffer2;
   auto atfalse =  root_group_18.attributes["bool_simple_false"];
   atfalse.read(buffer2);
   EXPECT_EQ(buffer2, false);
+  atfalse.read(ibuffer2);
+  EXPECT_EQ(ibuffer2, 0);
 }
 
 TEST_F(H5CppBoolTest, test_read_scalar_bool_110)
 {
   auto attrue =  root_group_110.attributes["bool_scalar_true"];
   bool buffer;
+  int ibuffer;
   attrue.read(buffer);
   EXPECT_EQ(buffer, true);
+  attrue.read(ibuffer);
+  EXPECT_EQ(ibuffer, 1);
   bool buffer2;
+  int ibuffer2;
   auto atfalse =  root_group_110.attributes["bool_scalar_false"];
   atfalse.read(buffer2);
   EXPECT_EQ(buffer2, false);
+  atfalse.read(ibuffer2);
+  EXPECT_EQ(ibuffer2, 0);
 }
 
 TEST_F(H5CppBoolTest, test_read_simple_bool_110)
 {
   auto attrue =  root_group_110.attributes["bool_simple_true"];
   bool buffer;
+  int ibuffer;
   attrue.read(buffer);
   EXPECT_EQ(buffer, true);
+  attrue.read(ibuffer);
+  EXPECT_EQ(ibuffer, 1);
   bool buffer2;
+  int ibuffer2;
   auto atfalse =  root_group_110.attributes["bool_simple_false"];
   atfalse.read(buffer2);
   EXPECT_EQ(buffer2, false);
+  atfalse.read(ibuffer2);
+  EXPECT_EQ(ibuffer2, 0);
 }
 
 #endif
